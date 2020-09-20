@@ -4,5 +4,7 @@
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
   "username": "artslob",
   "email": "artslob@yandex.ru",
-  "version": "0.0.1.dev"
+  "version": "0.0.1.dev",
+  "line_length": "100",
+  "black_version": "20.8b1"
 }
