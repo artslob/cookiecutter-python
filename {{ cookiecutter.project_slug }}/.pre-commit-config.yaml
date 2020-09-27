@@ -1,0 +1,15 @@
+default_language_version:
+  python: python3.7
+repos:
+  - repo: https://github.com/timothycrosley/isort
+    rev: {{ cookiecutter.isort_version }}
+    hooks:
+      - id: isort
+  - repo: https://github.com/psf/black
+    rev: {{ cookiecutter.black_version }}
+    hooks:
+      - id: black
+#  - repo: https://gitlab.com/PyCQA/flake8
+#    rev: 3.7.9
+#    hooks:
+#      - id: flake8
