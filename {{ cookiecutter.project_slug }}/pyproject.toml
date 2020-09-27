@@ -12,6 +12,7 @@ pytest = "^6.0.2"
 black = "{{ cookiecutter.black_version }}"
 isort = "{{ cookiecutter.isort_version }}"
 flake8 = "{{ cookiecutter.flake8_version }}"
+restview = "^2.9.2"
 
 [tool.black]
 line-length = {{ cookiecutter.line_length }}
