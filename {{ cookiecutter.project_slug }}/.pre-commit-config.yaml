@@ -9,7 +9,7 @@ repos:
     rev: {{ cookiecutter.black_version }}
     hooks:
       - id: black
-#  - repo: https://gitlab.com/PyCQA/flake8
-#    rev: 3.7.9
-#    hooks:
-#      - id: flake8
+  - repo: https://gitlab.com/PyCQA/flake8
+    rev: {{ cookiecutter.flake8_version }}
+    hooks:
+      - id: flake8

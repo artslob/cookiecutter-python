@@ -7,5 +7,6 @@
   "version": "0.0.1.dev",
   "line_length": "100",
   "black_version": "20.8b1",
-  "isort_version": "5.5.2"
+  "isort_version": "5.5.2",
+  "flake8_version": "3.8.3"
 }

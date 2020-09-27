@@ -11,10 +11,7 @@ python = "^3.7"
 pytest = "^6.0.2"
 black = "{{ cookiecutter.black_version }}"
 isort = "{{ cookiecutter.isort_version }}"
-
-[build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+flake8 = "{{ cookiecutter.flake8_version }}"
 
 [tool.black]
 line-length = {{ cookiecutter.line_length }}
@@ -28,3 +25,7 @@ combine_as_imports = true
 [tool.pytest.ini_options]
 minversion = "6.0"
 filterwarnings = "error"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
