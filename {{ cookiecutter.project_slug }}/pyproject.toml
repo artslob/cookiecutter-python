@@ -24,3 +24,7 @@ target-version = ["py37"]
 profile = "black"
 line_length = {{ cookiecutter.line_length }}
 combine_as_imports = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+filterwarnings = "error"
