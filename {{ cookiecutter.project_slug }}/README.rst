@@ -11,11 +11,11 @@ About
 
 {{ cookiecutter.project_slug }}
 
-.. image:: https://gitlab.com/artslob/cyberbox/badges/master/pipeline.svg
+.. image:: {{ cookiecutter.project_url }}/badges/master/pipeline.svg
     :target: {{ cookiecutter.project_url }}/-/commits/master
     :alt: pipeline status
 
-.. image:: https://gitlab.com/artslob/cyberbox/badges/master/coverage.svg
+.. image:: {{ cookiecutter.project_url }}/badges/master/coverage.svg
     :target: {{ cookiecutter.project_url }}/-/commits/master
     :alt: coverage report
 
