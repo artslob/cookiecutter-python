@@ -1,0 +1,39 @@
+image: 'python:3.7.4-buster'
+
+before_script:
+  - poetry -V
+  - poetry install
+  - poetry show
+  - pip list
+
+services:
+  - name: postgres:10.12
+    alias: db
+
+variables:
+  POSTGRES_PASSWORD: test-pass
+  POSTGRES_USER: test-user
+  POSTGRES_DB: test-db
+  {{ cookiecutter.project_slug.upper() }}_TEST_DB_URL: "postgresql://test-user:test-pass@db:5432/test-db"
+
+tests:
+  script:
+    - pytest --color=yes
+
+upgrade-downgrade-db:
+  script:
+    - python .ci/upgrade_and_downgrade_db.py
+
+compare-migrations-and-metadata:
+  script:
+    - psql --version
+    - ./.ci/make_dump.sh meta > meta
+    - ./.ci/make_dump.sh migration > migration
+    - diff --color=always migration meta
+
+code-style:
+  services: []
+  script:
+    - black --check .
+    - isort --check-only .
+    - flake8 .
