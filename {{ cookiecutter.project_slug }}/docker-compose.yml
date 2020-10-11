@@ -1,0 +1,35 @@
+version: '3.7'
+
+services:
+
+  {{ cookiecutter.project_slug }}:
+    build: .
+    ports:
+      - 9000:8000
+    environment:
+      {{ cookiecutter.project_slug.upper() }}_CONFIG_FILE: "/{{ cookiecutter.project_slug }}/configs/config-docker.yaml"
+    volumes:
+      - .:/{{ cookiecutter.project_slug }}
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: 'postgres:10.12'
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: devpass
+      POSTGRES_USER: devuser
+      POSTGRES_DB: {{ cookiecutter.project_slug }}-db
+    restart: always
+
+  test-db:
+    image: 'postgres:10.12'
+    ports:
+      - '6432:5432'
+    environment:
+      POSTGRES_PASSWORD: testpass
+      POSTGRES_USER: testuser
+      POSTGRES_DB: {{ cookiecutter.project_slug }}-test
+    restart: always
