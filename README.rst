@@ -14,6 +14,10 @@ About
 
 Docs: `<https://cookiecutter.readthedocs.io/en/latest/>`_.
 
+TODO:
+
+#. python version in config file
+
 *****
 Usage
 *****
