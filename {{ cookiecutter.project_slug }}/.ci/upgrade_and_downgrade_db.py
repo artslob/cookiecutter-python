@@ -4,7 +4,6 @@ import os
 from alembic import command
 from alembic.config import Config
 
-
 {{ cookiecutter.project_slug.upper() }}_TEST_DB_URL = "{{ cookiecutter.project_slug.upper() }}_TEST_DB_URL"
 
 

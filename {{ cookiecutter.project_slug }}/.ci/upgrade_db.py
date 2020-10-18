@@ -10,7 +10,6 @@ from sqlalchemy_utils import create_database, drop_database
 
 from {{ cookiecutter.project_slug }}.orm import metadata
 
-
 {{ cookiecutter.project_slug.upper() }}_TEST_DB_URL = "{{ cookiecutter.project_slug.upper() }}_TEST_DB_URL"
 
 
