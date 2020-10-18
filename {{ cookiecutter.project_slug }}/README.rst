@@ -33,14 +33,14 @@ Installation
 
 To install package locally firstly you need to install these:
 
-#. Python 3.7. You can install it with `pyenv <https://github.com/pyenv/pyenv>`_.
+#. Python {{ cookiecutter.python_version }}. You can install it with `pyenv <https://github.com/pyenv/pyenv>`_.
    I suggest also to install `virtualenv plugin <https://github.com/pyenv/pyenv-virtualenv>`_.
 #. `Poetry <https://python-poetry.org/docs/basic-usage/>`_ to manage dependencies.
 
 .. code-block:: bash
 
-    pyenv install 3.7.4
-    pyenv virtualenv 3.7.4 {{ cookiecutter.project_slug }}
+    pyenv install {{ cookiecutter.python_version }}
+    pyenv virtualenv {{ cookiecutter.python_version }} {{ cookiecutter.project_slug }}
     # in project root directory:
     pyenv local {{ cookiecutter.project_slug }}
     # now virtualenv should be active

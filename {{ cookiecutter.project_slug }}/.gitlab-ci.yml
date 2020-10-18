@@ -1,4 +1,4 @@
-image: 'python:3.7.4-buster'
+image: 'python:{{ cookiecutter.python_version }}-buster'
 
 before_script:
   - poetry -V

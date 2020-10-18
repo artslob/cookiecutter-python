@@ -1,7 +1,7 @@
 from uuid import uuid4
 
 import sqlalchemy
-from sqlalchemy import TIMESTAMP, Boolean, Column, ForeignKey, Integer, String
+from sqlalchemy import TIMESTAMP, Boolean, Column, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import expression
 

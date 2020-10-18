@@ -1,4 +1,4 @@
-FROM python:3.7.4-buster as ci
+FROM python:{{ cookiecutter.python_version }}-buster as ci
 
 RUN apt-get update && apt-get install -y postgresql-client
 

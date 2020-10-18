@@ -1,5 +1,5 @@
 default_language_version:
-  python: python3.7
+  python: python{{ cookiecutter.python_version }}
 repos:
   - repo: https://github.com/timothycrosley/isort
     rev: {{ cookiecutter.isort_version }}
