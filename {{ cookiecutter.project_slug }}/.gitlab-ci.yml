@@ -18,7 +18,8 @@ variables:
 
 tests:
   script:
-    - pytest --color=yes
+    - coverage run -m pytest --color=yes
+    - coverage report
 
 upgrade-downgrade-db:
   script:
