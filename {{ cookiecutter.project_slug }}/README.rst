@@ -9,7 +9,7 @@
 About
 *****
 
-{{ cookiecutter.project_slug }}
+{{ cookiecutter.project_short_description }}
 
 .. image:: {{ cookiecutter.project_url }}/badges/master/pipeline.svg
     :target: {{ cookiecutter.project_url }}/-/commits/master
